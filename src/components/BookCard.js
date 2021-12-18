@@ -23,18 +23,22 @@ const BookCard = ({
   };
 
   return (
-    <Card>
-      <Card.Content>
-        <Card.Header>{title}</Card.Header>
-        <Card.Description>Author: {author}</Card.Description>
-        <Card.Description>Publisher: {publisher}</Card.Description>
-      </Card.Content>
-      {!added ? (
-        <Button onClick={handleAddToList}>Add to reading list</Button>
-      ) : (
-        <Button disabled>Added to list</Button>
-      )}
-    </Card>
+    <div className="single-card">
+      <Card style={{ padding: "3%" }}>
+        <Card.Content>
+          <Card.Header>{title}</Card.Header>
+          <Card.Description>Author: {author}</Card.Description>
+          <Card.Description>Publisher: {publisher}</Card.Description>
+        </Card.Content>
+        {!added ? (
+          <Button color="green" onClick={handleAddToList}>
+            Add to reading list
+          </Button>
+        ) : (
+          <Button disabled>Added to list</Button>
+        )}
+      </Card>
+    </div>
   );
 };
 

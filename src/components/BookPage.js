@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, Icon } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 import BookContainer from "./BookContainer";
 import ReadingList from "./ReadingList";
 import Search from "./Search";
@@ -29,6 +29,7 @@ const BookPage = () => {
   // switch state when user clicks the "reading list button"
   const handleReadingListOn = () => {
     setReadingListOn((readingListOn) => !readingListOn);
+    setGoogleBooksData([]);
   };
 
   console.log(googleBooksData);
@@ -41,17 +42,19 @@ const BookPage = () => {
     // 3. when there is Google Books API data (searched), and when not in the reading list --> render search results
     // 4. when the reading list is on && if data exists in the reading list, show books from the reading list
 
-    <main>
+    <main className="book-page">
       {!readingListOn ? (
-        <Button icon labelPosition="right" onClick={handleReadingListOn}>
-          <Icon name="book" />
-          My Reading List
-        </Button>
+        <div className="reading-list-button">
+          <Button color="purple" size="huge" onClick={handleReadingListOn}>
+            My Reading List
+          </Button>
+        </div>
       ) : (
-        <Button icon labelPosition="right" onClick={handleReadingListOn}>
-          <Icon name="book" />
-          Search Books
-        </Button>
+        <div className="reading-list-button">
+          <Button color="purple" size="huge" onClick={handleReadingListOn}>
+            Search Books
+          </Button>
+        </div>
       )}
 
       {!readingListOn && <Search handleSearch={handleSearch} search={search} />}

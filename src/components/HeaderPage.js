@@ -1,15 +1,8 @@
-import { Header, Icon } from "semantic-ui-react";
-
 export const HeaderPage = () => {
   return (
-    <div className="header">
-      <Header as="h2" icon>
-        <Icon name="book" />
-        Book Finder 📚
-        <Header.Subheader>
-          Search books and save them to your reading list.
-        </Header.Subheader>
-      </Header>
+    <div className="header-main">
+      <h1 id="title">Book Finder 📚</h1>
+      <h3 id="subtitle">search and save books to your reading list 🔍</h3>
     </div>
   );
 };

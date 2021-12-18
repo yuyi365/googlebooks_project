@@ -11,15 +11,20 @@ const Search = ({ handleSearch }) => {
   };
 
   return (
-    <Form onSubmit={handleSearchSubmit}>
+    <Form onSubmit={handleSearchSubmit} style={{ padding: "3%" }}>
       <Form.Field>
-        <label>Book Title</label>
+        <label id="search-label">Search book by title: </label>
         <input
-          placeholder="Catcher in the Rye"
+          style={{ width: "50%", textAlign: "center" }}
+          placeholder="ex: Catcher in the Rye, The Great Gatsby"
           onChange={(e) => setSearchInput(e.target.value)}
         />
+        <span id="search-button-div">
+          <Button color="blue" type="submit" size="large">
+            Search
+          </Button>
+        </span>
       </Form.Field>
-      <Button type="submit">Search</Button>
     </Form>
   );
 };

@@ -20,7 +20,7 @@ const BookContainer = ({
     );
   });
 
-  return <div>{mapBooks}</div>;
+  return <div className="card-container">{mapBooks}</div>;
 };
 
 export default BookContainer;

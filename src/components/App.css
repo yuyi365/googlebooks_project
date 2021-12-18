@@ -1,3 +1,82 @@
-/* * {
-  border: 1px solid red;
-} */
+* {
+  font-family: "Nunito", sans-serif !important;
+  /* border: 1px solid red; */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(173, 216, 205) !important;
+}
+
+.app {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgb(173, 216, 205);
+}
+
+.header-main {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding: 3%;
+  border-radius: 50px;
+  background-color: rgb(218, 177, 225);
+}
+
+#title {
+  font-size: 32px;
+}
+
+#subtitle {
+  font-size: 22px;
+}
+
+.book-page {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding: 5%;
+}
+
+.reading-list-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#add-book-message {
+  padding: 5%;
+  color: purple;
+}
+
+#search-label {
+  padding: 1%;
+  margin-right: 43%;
+  font-size: 18px;
+}
+
+#search-button-div {
+  margin-left: 3%;
+}
+
+.card-container {
+  height: 100%;
+  padding: 3%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.single-card {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding: 3%;
+}

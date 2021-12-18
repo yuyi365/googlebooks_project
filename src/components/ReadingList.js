@@ -13,7 +13,15 @@ const ReadingList = ({ readingListBooks }) => {
     );
   });
 
-  return <div>{mapReadingList}</div>;
+  return (
+    <div className="card-container">
+      {readingListBooks.length == 0 ? (
+        <h2 id="add-book-message">"Please add some books!"</h2>
+      ) : (
+        <div>{mapReadingList}</div>
+      )}
+    </div>
+  );
 };
 
 export default ReadingList;
