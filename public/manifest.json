@@ -1,0 +1,9 @@
+{
+  "short_name": "Book App",
+  "name": "Book Finder",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
