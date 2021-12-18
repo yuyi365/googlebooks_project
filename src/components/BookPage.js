@@ -13,7 +13,7 @@ const BookPage = () => {
   // fetch information from Google Books API everytime the 'search' state changes
   useEffect(() => {
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCfmin596gjyWiJNgzKOCqkmo_KKNFtFKI&maxResults=5`
+      `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCfmin596gjyWiJNgzKOCqkmo_KKNFtFKI&maxResults=5&startIndex=0`
     )
       .then((res) => res.json())
       .then((bookData) => {
@@ -33,8 +33,8 @@ const BookPage = () => {
   };
 
   console.log(googleBooksData);
-  console.log(readingListBooks);
-  console.log(readingListOn);
+  // console.log(readingListBooks);
+  // console.log(readingListOn);
 
   return (
     // 1. button for user to access the "reading list" & toggle back to the search
