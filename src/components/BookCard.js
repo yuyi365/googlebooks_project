@@ -8,6 +8,8 @@ const BookCard = ({
   readingListBooks,
   setReadingListBooks,
 }) => {
+  // render cards that display books from user searches
+
   const [added, setAdded] = useState(false);
 
   const handleAddToList = () => {

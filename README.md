@@ -22,3 +22,7 @@ Book Explorer is intended to be used by individuals to search books and store bo
 # Libraries & Server/Database Tools Used
 
 - Semantic UI (frontend)
+
+# Component Tree
+
+![Component Tree](tree.png)

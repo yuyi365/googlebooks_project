@@ -32,7 +32,7 @@ const BookPage = () => {
     setGoogleBooksData([]);
   };
 
-  console.log(googleBooksData);
+  // console.log(googleBooksData);
   // console.log(readingListBooks);
   // console.log(readingListOn);
 

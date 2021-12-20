@@ -1,6 +1,8 @@
 import { Card } from "semantic-ui-react";
 
 const ReadingBookCard = ({ title, author, publisher }) => {
+  // renders cards that display books from the reading list
+
   return (
     <div className="single-card">
       <Card style={{ padding: "3%" }}>
