@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "semantic-ui-react";
 import BookContainer from "./BookContainer";
 import ReadingList from "./ReadingList";
@@ -9,16 +9,22 @@ const BookPage = () => {
   const [googleBooksData, setGoogleBooksData] = useState([]);
   const [readingListBooks, setReadingListBooks] = useState([]);
   const [readingListOn, setReadingListOn] = useState(false);
+  const isMounted = useRef(false);
 
   // fetch information from Google Books API everytime the 'search' state changes
+  // updated with the "useRef" hook so that useEffect does not fetch on render/mount
   useEffect(() => {
-    fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCfmin596gjyWiJNgzKOCqkmo_KKNFtFKI&maxResults=5&startIndex=0`
-    )
-      .then((res) => res.json())
-      .then((bookData) => {
-        setGoogleBooksData(bookData.items);
-      });
+    if (isMounted.current) {
+      fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCfmin596gjyWiJNgzKOCqkmo_KKNFtFKI&maxResults=5&startIndex=0`
+      )
+        .then((res) => res.json())
+        .then((bookData) => {
+          setGoogleBooksData(bookData.items);
+        });
+    } else {
+      isMounted.current = true;
+    }
   }, [search]);
 
   // function to handle the user 'search'

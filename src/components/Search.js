@@ -6,7 +6,11 @@ const Search = ({ handleSearch }) => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    handleSearch(searchInput);
+    if (/^[a-zA-Z0-9]/i.test(searchInput)) {
+      handleSearch(searchInput);
+    } else {
+      return alert("Please enter a valid search term!");
+    }
     e.target.reset();
   };
 
