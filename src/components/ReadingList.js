@@ -4,6 +4,7 @@ const ReadingList = ({ readingListBooks }) => {
   const mapReadingList = readingListBooks.map((book) => {
     return (
       <ReadingBookCard
+        key={book.id}
         title={book.title}
         author={book.author}
         publisher={book.publisher}

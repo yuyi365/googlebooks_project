@@ -14,6 +14,8 @@ const BookContainer = ({
     ) {
       return (
         <BookCard
+          key={book.id}
+          id={book.id}
           title={book.volumeInfo.title}
           author={book.volumeInfo.authors[0]}
           publisher={book.volumeInfo.publisher}
@@ -25,6 +27,8 @@ const BookContainer = ({
     } else if (book.volumeInfo.title && book.volumeInfo.publisher) {
       return (
         <BookCard
+          key={book.id}
+          id={book.id}
           title={book.volumeInfo.title}
           author={"N/A"}
           publisher={book.volumeInfo.publisher}
@@ -36,6 +40,8 @@ const BookContainer = ({
     } else if (book.volumeInfo.title && book.volumeInfo.authors) {
       return (
         <BookCard
+          key={book.id}
+          id={book.id}
           title={book.volumeInfo.title}
           author={book.volumeInfo.authors[0]}
           publisher={"N/A"}
@@ -47,6 +53,8 @@ const BookContainer = ({
     } else if (book.volumeInfo.title) {
       return (
         <BookCard
+          key={book.id}
+          id={book.id}
           title={book.volumeInfo.title}
           author={"N/A"}
           publisher={"N/A"}

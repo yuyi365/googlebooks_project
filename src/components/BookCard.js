@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Card } from "semantic-ui-react";
 
 const BookCard = ({
+  id,
   title,
   author,
   publisher,
@@ -20,6 +21,7 @@ const BookCard = ({
         title: title,
         author: author,
         publisher: publisher,
+        id: id,
       },
     ]);
   };
