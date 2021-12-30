@@ -24,7 +24,12 @@ const Search = ({ handleSearch }) => {
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <span id="search-button-div">
-          <Button color="blue" type="submit" size="large">
+          <Button
+            color="blue"
+            type="submit"
+            size="large"
+            data-testid="search-button"
+          >
             Search
           </Button>
         </span>
